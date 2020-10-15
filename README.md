@@ -1,5 +1,5 @@
-# Track-Recorder
-A React-Native Application that tracks your outgoing and Store it into database.
+# LifeSpire-Disease Predictor(Aapka Doctor)
+A React-Native Application that Predicts Disease based on symptoms Provided by user, it alsotracks your outgoing and Store it into database.
 # Database Used: MongoDB
 For API Part: Express API is used
 # ngrok
