@@ -13,6 +13,8 @@ const authReducer = (state, action) => {
       return { ...state, errorMessage: '' };
     case 'signout':
       return { token: null, errorMessage: '' };
+    case 'PredictDisease':
+      return action.payload;
     default:
       return state;
   }
@@ -67,8 +69,23 @@ const signout = dispatch => async () => {
   navigate('loginFlow');
 };
 
+
+const predictDisease = dispatch => async ({Symptom1, Symptom2, Symptom3, Symptom4, Symptom5})=>{
+  console.log({Symptom1});
+  try {
+      const response = await trackerApi.post('/predictDisease',{Symptom1, Symptom2, Symptom3, Symptom4, Symptom5});
+      //console.log(response);
+      dispatch({ type: 'PredictDisease', payload: response.data});
+      //return response;
+      navigate('Predict');
+       
+  } catch (err) {
+      
+  }
+};
+
 export const { Provider, Context } = createDataContext(
   authReducer,
-  { signin, signout, signup, clearErrorMessage, tryLocalSignin },
-  { token: null, errorMessage: '' }
+  { signin, signout, signup, clearErrorMessage, tryLocalSignin, predictDisease },
+  { token: null, errorMessage: '' , disease: ''}
 );

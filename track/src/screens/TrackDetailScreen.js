@@ -16,9 +16,10 @@ const TrackDetailScreen = ({ navigation }) => {
 
       <MapView
         initialRegion={{
+          ...initialCoords,
           longitudeDelta: 0.01,
           latitudeDelta: 0.01,
-          ...initialCoords
+          
         }}
         style={styles.map}
       >

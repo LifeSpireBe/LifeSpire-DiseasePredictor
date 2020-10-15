@@ -1,0 +1,70 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\rahul\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add @types/react-native-calenders
+
+PATH: 
+  C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Java\jdk-13.0.2\bin;C:\Python34;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Users\rahul\AppData\Local\Programs\Python\Python38-32\Scripts\;C:\Users\rahul\AppData\Local\Programs\Python\Python38-32\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Java\jdk-13.0.2\bin;C:\Program Files\Git\cmd;C:\Users\rahul\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\rahul\AppData\Local\Programs\Python\Python38-32;C:\Users\rahul\AppData\Local\Microsoft\WindowsApps;C:\Users\rahul\AppData\Local\Programs\Microsoft VS Code\bin;C:\Python27\;C:\Python27\Scripts\;C:\Users\rahul\AppData\Roaming\npm;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;
+
+Yarn version: 
+  1.22.5
+
+Node version: 
+  12.18.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.npmjs.org/@types%2freact-native-calenders: Not found
+      at Request.params.callback [as _callback] (C:\Users\rahul\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66988:18)
+      at Request.self.callback (C:\Users\rahul\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140662:22)
+      at Request.emit (events.js:315:20)
+      at Request.<anonymous> (C:\Users\rahul\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141634:10)
+      at Request.emit (events.js:315:20)
+      at IncomingMessage.<anonymous> (C:\Users\rahul\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141556:12)
+      at Object.onceWrapper (events.js:421:28)
+      at IncomingMessage.emit (events.js:327:22)
+      at endReadableNT (_stream_readable.js:1221:12)
+      at processTicksAndRejections (internal/process/task_queues.js:84:21)
+
+npm manifest: 
+  {
+    "main": "node_modules/expo/AppEntry.js",
+    "scripts": {
+      "start": "expo start",
+      "android": "expo start --android",
+      "ios": "expo start --ios",
+      "web": "expo start --web",
+      "eject": "expo eject"
+    },
+    "dependencies": {
+      "@react-native-community/masked-view": "^0.1.6",
+      "axios": "^0.19.2",
+      "expo": "^37.0.0",
+      "expo-location": "~8.1.0",
+      "react": "16.9.0",
+      "react-dom": "16.9.0",
+      "react-native": "https://github.com/expo/react-native/archive/sdk-37.0.1.tar.gz",
+      "react-native-calendar-events": "^2.1.0",
+      "react-native-calendars": "^1.403.0",
+      "react-native-elements": "^2.0.2",
+      "react-native-gesture-handler": "~1.6.0",
+      "react-native-maps": "0.26.1",
+      "react-native-reanimated": "~1.7.0",
+      "react-native-safe-area-context": "0.7.3",
+      "react-native-screens": "~2.2.0",
+      "react-navigation": "^4.3.9",
+      "react-navigation-stack": "^2.7.0",
+      "react-navigation-tabs": "^2.8.13"
+    },
+    "devDependencies": {
+      "babel-preset-expo": "^8.1.0",
+      "@babel/core": "^7.0.0"
+    },
+    "private": true
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

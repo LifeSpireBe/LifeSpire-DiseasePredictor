@@ -4,5 +4,5 @@
   "dev": true,
   "minify": false,
   "urlRandomness": "wp-43k",
-  "https": true
+  "https": false
 }

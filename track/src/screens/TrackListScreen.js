@@ -30,7 +30,7 @@ const TrackListScreen = ({ navigation }) => {
 };
 
 TrackListScreen.navigationOptions = {
-  title: 'Tracks'
+  title: 'LifeSpire'
 };
 
 const styles = StyleSheet.create({});

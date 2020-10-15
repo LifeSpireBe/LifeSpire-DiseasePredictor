@@ -15,12 +15,39 @@ import ResolveAuthScreen from './src/screens/ResolveAuthScreen';
 import { Provider as LocationProvider } from './src/context/LocationContext';
 import { Provider as TrackProvider } from './src/context/TrackContext';
 import { FontAwesome } from '@expo/vector-icons';
+import DiseaseScreen from './src/screens/DiseaseScreen';
+import HomeScreen from './src/screens/HomeScreen';
+import PredictedDisease from './src/screens/PredictedDisease';
+import CreateTask from './src/screens/CreateTask';
 
+import { Entypo } from '@expo/vector-icons'; 
 const trackListFlow = createStackNavigator({
   TrackList: TrackListScreen,
   TrackDetail: TrackDetailScreen,
 });
 
+
+const DiseaseNav = createStackNavigator({
+  Predictor: DiseaseScreen,
+  Predict: PredictedDisease
+  
+});
+
+const CalenderNav = createStackNavigator({
+  HomeScreen,
+  CreateTask
+
+})
+
+CalenderNav.navigationOptions={
+  title:'Reminder',
+  tabBarIcon:<FontAwesome name="calendar" size={24} color="black" />
+}
+
+DiseaseNav.navigationOptions={
+  title:'Predictor',
+  tabBarIcon:<FontAwesome name="heart" size={24} color="red" />,
+}
 trackListFlow.navigationOptions = {
   title: 'Tracks',
   tabBarIcon: <FontAwesome name="th-list" size={20} />,
@@ -33,8 +60,10 @@ const switchNavigator = createSwitchNavigator({
     Signin: SigninScreen,
   }),
   mainFlow: createBottomTabNavigator({
+    DiseaseNav,
     trackListFlow,
     TrackCreate: TrackCreateScreen,
+    CalenderNav,
     Account: AccountScreen,
   }),
 });
