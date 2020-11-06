@@ -2,7 +2,7 @@ import React from 'react';
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
-
+import TwitterApi from './src/screens/TwitterApi';
 import AccountScreen from './src/screens/AccountScreen';
 import SigninScreen from './src/screens/SigninScreen';
 import SignupScreen from './src/screens/SignupScreen';
@@ -16,11 +16,10 @@ import { Provider as LocationProvider } from './src/context/LocationContext';
 import { Provider as TrackProvider } from './src/context/TrackContext';
 import { FontAwesome } from '@expo/vector-icons';
 import DiseaseScreen from './src/screens/DiseaseScreen';
-import HomeScreen from './src/screens/HomeScreen';
 import PredictedDisease from './src/screens/PredictedDisease';
 import CreateTask from './src/screens/CreateTask';
-
-import { Entypo } from '@expo/vector-icons'; 
+import TwitterUserList from './src/screens/TwitterUserList';
+import { Entypo } from '@expo/vector-icons';
 const trackListFlow = createStackNavigator({
   TrackList: TrackListScreen,
   TrackDetail: TrackDetailScreen,
@@ -34,14 +33,13 @@ const DiseaseNav = createStackNavigator({
 });
 
 const CalenderNav = createStackNavigator({
-  HomeScreen,
-  CreateTask
-
+ TwitterUserList,
+ TwitterApi
 })
 
 CalenderNav.navigationOptions={
-  title:'Reminder',
-  tabBarIcon:<FontAwesome name="calendar" size={24} color="black" />
+  title:'News',
+  tabBarIcon:<Entypo name="news" size={24} color="black" />
 }
 
 DiseaseNav.navigationOptions={

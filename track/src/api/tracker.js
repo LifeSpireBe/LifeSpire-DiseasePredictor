@@ -3,7 +3,7 @@ import { AsyncStorage } from 'react-native';
 
 let url;
 if (__DEV__) {
-  url = '';
+  url = 'http://5a942aeb9176.ngrok.io';
 } else {
   url = '';
 }

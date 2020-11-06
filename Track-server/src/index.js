@@ -8,16 +8,16 @@ const authRoutes = require('./routes/authRoutes');
 const trackRoutes = require('./routes/trackRoutes');
 const diseaseRoutes=require('./routes/diseaseRoute');
 const requireAuth = require('./middlewares/requireAuth');
-
+const twitterRoute= require('./routes/twitterRoute');
 const app = express();
 
 app.use(bodyParser.json());
+app.use(twitterRoute)
 app.use(diseaseRoutes);
 app.use(authRoutes);
 app.use(trackRoutes);
 
-const mongoUri = '';// put your mongoDB link here
-
+const mongoUri = 'mongodb+srv://rahuldalvi:Rahulrd@05@cluster0.l9kwu.mongodb.net/<dbname>?retryWrites=true&w=majority';
 if (!mongoUri) {
   throw new Error(
     `MongoURI was not supplied.  Make sure you watch the video on setting up Mongo DB!`

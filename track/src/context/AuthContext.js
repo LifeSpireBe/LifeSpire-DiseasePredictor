@@ -15,6 +15,8 @@ const authReducer = (state, action) => {
       return { token: null, errorMessage: '' };
     case 'PredictDisease':
       return action.payload;
+    case 'FetchTweets':
+      return action.payload;
     default:
       return state;
   }
@@ -83,9 +85,16 @@ const predictDisease = dispatch => async ({Symptom1, Symptom2, Symptom3, Symptom
       
   }
 };
+const fetchTweets = dispatch => async (handle) => {
+  console.log('-----------')
+  console.log(handle)
+  const response = await trackerApi.post('/getTweets',{handle})
+  dispatch({type: 'FetchTweets', payload: response.data})
+};
+
 
 export const { Provider, Context } = createDataContext(
   authReducer,
-  { signin, signout, signup, clearErrorMessage, tryLocalSignin, predictDisease },
+  { signin, signout, signup, clearErrorMessage, tryLocalSignin, predictDisease,fetchTweets },
   { token: null, errorMessage: '' , disease: ''}
 );

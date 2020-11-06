@@ -20,6 +20,7 @@ router.post('/predictDisease', async (req, res)=>{
     pyshell.send(JSON.stringify(JSON_data));
     pyshell.on('message',(message) =>
     {
+        console.log(message)
        res.send(message);
     });
     pyshell.end((err) =>    
